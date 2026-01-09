@@ -16,6 +16,8 @@
     },
     "images": [
         "pos_origin_cashier_receipt/static/description/icon.png",
+        "pos_origin_cashier_receipt/static/description/cover.png",
+        "pos_origin_cashier_receipt/static/description/banner.png",
     ],
     "application": False,
     "installable": True,
