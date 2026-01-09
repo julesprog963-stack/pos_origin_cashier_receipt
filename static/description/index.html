@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>POS Origin Cashier Receipt</title>
+    <style>
+      :root {
+        --bg: #f6f3ee;
+        --ink: #1f1f1f;
+        --muted: #5c5c5c;
+        --accent: #c24b2a;
+        --card: #ffffff;
+        --border: #e3ded6;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Georgia", "Times New Roman", serif;
+        color: var(--ink);
+        background: var(--bg);
+      }
+      .wrap {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 40px 24px 56px;
+      }
+      .hero {
+        background: linear-gradient(135deg, #fff 0%, #f2e9df 100%);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 28px;
+        display: grid;
+        gap: 12px;
+      }
+      .kicker {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+      .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin-top: 24px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 16px;
+      }
+      .card h3 {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+      }
+      ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+      .badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .footer {
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <div class="kicker">Odoo 17 - Point of Sale</div>
+        <h1>POS Origin Cashier Receipt</h1>
+        <p class="subtitle">Imprime el cajero origen en el ticket de POS, con fallback seguro cuando no hay dato.</p>
+        <div class="badge">Compatible con POS + pos_hr</div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h3>Que hace</h3>
+          <ul>
+            <li>Agrega una linea "Cashier Origen" en el recibo</li>
+            <li>Usa el campo origin_cashier_id ya existente</li>
+            <li>No altera flujos normales ni devoluciones</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Ventajas</h3>
+          <ul>
+            <li>Herencia limpia de plantilla QWeb</li>
+            <li>Sin cambios al core de Odoo</li>
+            <li>Sin permisos ni ACL adicionales</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Instalacion</h3>
+          <ul>
+            <li>Actualizar la lista de Apps</li>
+            <li>Instalar/Actualizar el modulo</li>
+            <li>Imprimir ticket y validar linea</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="footer">
+        Nota: requiere el modulo pos_origin_cashier para exponer el cajero origen.
+      </div>
+    </div>
+  </body>
+</html>
