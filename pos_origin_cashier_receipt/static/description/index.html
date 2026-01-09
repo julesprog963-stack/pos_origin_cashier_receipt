@@ -15,7 +15,7 @@
       * { box-sizing: border-box; }
       body {
         margin: 0;
-        font-family: "Georgia", "Times New Roman", serif;
+        font-family: "Trebuchet MS", "Lucida Grande", "Verdana", sans-serif;
         color: var(--ink);
         background: var(--bg);
       }
@@ -47,35 +47,36 @@
         color: var(--muted);
         font-size: 16px;
       }
-      .grid {
-        display: grid;
-        gap: 16px;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        margin-top: 24px;
+      .badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
       }
-      .card {
+      .section {
+        margin-top: 20px;
         background: var(--card);
         border: 1px solid var(--border);
         border-radius: 14px;
-        padding: 16px;
+        padding: 18px 20px;
       }
-      .card h3 {
+      .section h3 {
         margin: 0 0 10px 0;
-        font-size: 16px;
+        font-size: 17px;
       }
       ul {
         margin: 0;
         padding-left: 18px;
         color: var(--muted);
       }
-      .badge {
-        display: inline-block;
-        padding: 4px 8px;
-        border-radius: 999px;
-        background: var(--accent);
-        color: #fff;
-        font-size: 12px;
-        font-weight: 600;
+      li {
+        margin: 6px 0;
+        word-break: normal;
+        overflow-wrap: normal;
+        white-space: normal;
       }
       .footer {
         margin-top: 28px;
@@ -93,31 +94,31 @@
         <div class="badge">Compatible con POS + pos_hr</div>
       </section>
 
-      <section class="grid">
-        <div class="card">
-          <h3>Que hace</h3>
-          <ul>
-            <li>Agrega una linea "Cashier Origen" en el recibo</li>
-            <li>Usa el campo origin_cashier_id ya existente</li>
-            <li>No altera flujos normales ni devoluciones</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Ventajas</h3>
-          <ul>
-            <li>Herencia limpia de plantilla QWeb</li>
-            <li>Sin cambios al core de Odoo</li>
-            <li>Sin permisos ni ACL adicionales</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Instalacion</h3>
-          <ul>
-            <li>Actualizar la lista de Apps</li>
-            <li>Instalar/Actualizar el modulo</li>
-            <li>Imprimir ticket y validar linea</li>
-          </ul>
-        </div>
+      <section class="section">
+        <h3>Que hace</h3>
+        <ul>
+          <li>Agrega una linea "Cashier Origen" en el recibo</li>
+          <li>Usa el campo origin_cashier_id ya existente</li>
+          <li>No altera flujos normales ni devoluciones</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>Ventajas</h3>
+        <ul>
+          <li>Herencia limpia de plantilla QWeb</li>
+          <li>Sin cambios al core de Odoo</li>
+          <li>Sin permisos ni ACL adicionales</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>Instalacion</h3>
+        <ul>
+          <li>Actualizar la lista de Apps</li>
+          <li>Instalar/Actualizar el modulo</li>
+          <li>Imprimir ticket y validar linea</li>
+        </ul>
       </section>
 
       <div class="footer">
